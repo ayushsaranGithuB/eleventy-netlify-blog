@@ -23,5 +23,12 @@ prism: true
 	<p>Tags:
 		{{ tags }}
 	</p>
+	{% for tag in tags -%}
+	{% if tag !== 'posts' %}
+	<a href="'tags/{{ tag }}" class="tag">
+		{{ tag }}
+	</a>
+	{% endif %}
+	{%- endfor %}
 
 </div>
