@@ -19,17 +19,17 @@ prism: true
 	</div>
 	<article class="prose lg:prose-xl my-4 mx-auto">
 		{{ content | safe }}
+		<p class="tags  my-4 mx-auto">
+			<h6>Tags:</h6>
+			{% for tag in tags -%}
+			{% if tag !== 'post' %}
+			<a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+			{% endif %}
+			{%- endfor %}
+			</p>
 	</article>
-	<p>
-	<h6>Tags:</h6>
-	{% for tag in tags -%}
-	{% if tag !== 'post' %}
-	<a href="/tags/{{ tag }}" class="tag">#
-		{{ tag }}
-	</a>
-	{% endif %}
-	{%- endfor %}
-	</p>
+	
+	
 
 
 </div>
