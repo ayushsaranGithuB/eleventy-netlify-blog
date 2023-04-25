@@ -4,7 +4,8 @@ description: "The Thrilla in Manilla! "
 author: Ayush
 date: 2016-02-09T20:57:48.162Z
 tags:
-  - created
+  - travel
+  - phillipines
 ---
 We arrived in Manilla at 2:30 am. There were still people on the street and shops and markets open. It reminded me a lot of Mumbai. It's a very active city and could be really fun to explore
 
