@@ -5,16 +5,15 @@ path: home
 ---
 
 
-<div class="container max-w-3xl mt-6 px-6">
+<div class="container max-w-3xl px-6">
 
 	<h1 class="font-bold text-5xl">{{title}}</h1>
 
    
-<section>
-    {% set postslist = collections.post %}
-
-    {% for post in postslist | reverse %}
-        <article class="my-8">
+<section class="allPosts">
+    {% set postslist = collections.post  %}
+    {% for post in postslist.slice(0,5) | reverse %}
+        <article class="eachPost">
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
@@ -24,13 +23,10 @@ path: home
                     {% endif %}
                 </a>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
-
-                </time>
+            <p class="postDate">
+                    <span class='day'>{{ post.date | readableDay }}</span>
+                    <span class='month'>{{ post.date | readableMonth }}</span>
+                    <span class='year'>{{ post.date | readableYear }}</span>
             </p>
             {% if post.data.description %}
                 <p class="text-lg text-gray-500 mb-3">
@@ -38,14 +34,13 @@ path: home
                 </p>
             {% endif %}
 
-            <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    Read more →
-                </a>
-            </p>
+     
 
         </article>
     {% endfor %}
 </section>
+<p class="text-center">
+    <a href="/archive" class="more">See All Posts...</a>
+</p>
 
 </div>

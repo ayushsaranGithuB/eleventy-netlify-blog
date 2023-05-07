@@ -10,12 +10,33 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
-  // human readable date
+  // human readable dates
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
     );
   });
+
+      // human readable day
+      eleventyConfig.addFilter("readableDay", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+          "dd"
+        );
+      });
+
+      // human readable Month
+      eleventyConfig.addFilter("readableMonth", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+          "LLL"
+        );
+      });
+
+      // human readable Year
+      eleventyConfig.addFilter("readableYear", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+          "yyyy"
+        );
+      });
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);

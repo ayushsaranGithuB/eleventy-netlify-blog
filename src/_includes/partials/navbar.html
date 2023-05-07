@@ -1,33 +1,49 @@
-<div class=" w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
-        <div class="logo">
-            <a href="/" class=" font-bold text-lg">
-                <img class="inline" src="/static/img/favicon-32x32.png"/> Ayush's Blog</a>
+<div class="nav-wrapper">
+    <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+    
+        <div class="content">
+            <div class="logo">
+                <a href="/">
+                    <img class="inline" src="https://www.ayushsaran.info/img/logo_round_196.png" width="32" /> Ayush's Blog
+                </a>
+
+            </div>
+            <ul class="links">
+
+                {% if navigation.items %}
+                {% for item in navigation.items %}
+                <li>
+                    <a @click="isOpen = false" href="{{ item.url }}">
+                        {{ item.text }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
+
+                <!-- 
+            <li>
+            <a href="#" class="desktop-link">Features</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li><a href="#">Drop Menu 4</a></li>
+            </ul>
+            </li> -->
+
+
+            </ul>
+            <label for="show-menu" class="menu-icon">MENU&nbsp;
+                <svg viewBox="0 0 100 80" width="30" height="30">
+                    <rect width="100" height="20" fill="#ffffff"></rect>
+                    <rect y="30" width="100" height="20" fill="#ffffff"></rect>
+                    <rect y="60" width="100" height="20" fill="#ffffff"></rect>
+                </svg>
+            </label>
         </div>
-
-        <!--Toggle button (hidden on large screens)-->
-        <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-            </svg>
-        </button>
-
-        <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
-
-            {% if navigation.items %}
-
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-                    {% for item in navigation.items %}
-                        <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            {% endif %}
-        </div>
+     
     </nav>
 </div>
