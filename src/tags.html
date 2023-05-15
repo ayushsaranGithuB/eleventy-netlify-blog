@@ -6,17 +6,25 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: default
 ---
-<h1>Tagged “{{ tag }}”</h1>
 
 
-<div class="container max-w-4xl mt-6 px-6">
-<p>
-{% set taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <h3>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-  </h3>
-  <p>{{post.data.description}}</p>
-{% endfor %}
-</p>
-</div>
+<main class="archive">
+	<header>
+		<h1>#{{ tag }}</h1>
+		<p class="postMeta">
+			All Articles Tagged with &up
+		</p>
+	</header>	
+
+
+<section class="allPosts limitedWidth">
+  {% set taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+    <h3>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+    <p>{{post.data.description}}</p>
+  {% endfor %}
+</section>
+
+</main>
