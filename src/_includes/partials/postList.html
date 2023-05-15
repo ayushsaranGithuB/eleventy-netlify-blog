@@ -1,39 +1,41 @@
 {% for post in postslist | reverse %}
 <article class="post">
 
-    {% if post.data.thumbnail %}
-        <div class="postThumb">
-            <img src='{{ post.data.thumbnail }}'/>
-        </div>
-    {% endif %}
+	{% if post.data.thumbnail %}
+	<div class="postThumb">
+		<img src='{{ post.data.thumbnail }}' width="100" />
+	</div>
+	{% endif %}
+
+	<div class="postContent">
+		<h2 class="postTitle">
+			<a href="{{ post.url | url }}">
+				{% if post.data.title %}
+				{{ post.data.title }}
+				{% else %}
+				Untitled
+				{% endif %}
+			</a>
+		</h2>
+		{% if post.data.description %}
+		<p class="postExcerpt">
+			{{ post.data.description }}
+		</p>
+		{% endif %}
+	</div>
+	<p class="postDate">
+		<time>
+			{{ post.date | readableDate }}
+		</time>
+	</p>
 
 
-    <h2 class="postTitle">
-        <a href="{{ post.url | url }}">
-            {% if post.data.title %}
-                {{ post.data.title }}
-            {% else %}
-                Untitled
-            {% endif %}
-        </a>
-    </h2>
-    <p class="postDate">
-        <time>
-            {{ post.date | readableDate }}
-        </time>
-    </p>
 
-    {% if post.data.description %}
-        <p class="postExcerpt">
-            {{ post.data.description }}
-        </p>
-    {% endif %}
-
-    <p class="tagged">
-        <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-            #Travel
-        </a>
-    </p>
+	<p class="tagged">
+		<a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+			#Travel
+		</a>
+	</p>
 
 </article>
 {% endfor %}

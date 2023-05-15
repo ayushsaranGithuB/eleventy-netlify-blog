@@ -20,6 +20,13 @@ title: Single Post Page
 		</p>
 	</header>
 	<article class="limitedWidth singlePost">
+
+		{% if thumbnail %}
+			<div class="postThumb">
+				<img src='{{ thumbnail }}' width="500"/>
+			</div>
+		{% endif %}
+
 		{{ content | safe }}
 		
 	</article>

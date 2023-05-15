@@ -189,21 +189,52 @@ main header p{
     flex-wrap: wrap;
 }
 
+.postWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.postContent{
+    order: 3;
+    flex-basis: 70%;
+}
+
 .post h2.postTitle{
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -1px;
-    order: 3;
-    width: 100%;
-    margin: 0;
+    margin: 0 0 0px 0;
+    order: 2;
 }    
 
 .postExcerpt{
-    order: 4;
     max-width: 82ch;
-    margin:5px 0 40px;
+    margin:0 0 40px;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 22px;    
+}
+
+.postThumb{
+    width: 110px;
+    order: 3;
+}
+
+
+.postThumb img{
+    border-radius: 6px;
+    max-width: 120px;
+    margin-bottom: 30px;
+}
+
+.singlePost .postThumb img{
+    border-radius: 6px;
+    max-width: 500px;
+}
+
+.singlePost .postThumb {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
 }
 
 .tagged{
@@ -233,7 +264,8 @@ main header p{
     color: var(--light);
     order: 2;
     margin-left: 20px;
-    margin-right: auto;
+    margin-right: auto; 
+    flex-basis: 80%;
 }    
 
 p.seeMore{
@@ -256,11 +288,11 @@ p.seeMore{
     }
 
 /* SPECIAL FORMAT FOR FIRST POST  */
-.post:first-of-type h2{
+.home .post:first-of-type h2{
     font-size: 32px;
 }
 
-.post:first-of-type .postExcerpt{
+.home .post:first-of-type .postExcerpt{
     font-size: 15px;
     line-height: 24px;
     border-bottom: 1px solid var(--lighter);
