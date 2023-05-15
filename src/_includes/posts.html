@@ -1,35 +1,32 @@
 ---
 layout: default
-prism: true
+title: Single Post Page
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-	<div class="pb-5 mb-5 border-b border-gray-100">
-		<h1 class="font-bold text-5xl">{{title}}</h1>
-		<p class="text-center text-base leading-6 font-medium text-gray-500">
+<main class="singlePost">
+	<header>
+		<h1>{{title}}</h1>
+		<p class="postMeta">
+			
+			{% for tag in tags -%}
+				{% if tag !== 'post' %}
+					<a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+				{% endif %}
+			{%- endfor %}
+			| 
 			<time>
 				{{ date | readableDate }}
-				by
-				<a>
-					{{ author }}</a>
-
 			</time>
 		</p>
-
-	</div>
-	<article class="prose lg:prose-xl my-4 mx-auto">
+	</header>
+	<article class="limitedWidth singlePost">
 		{{ content | safe }}
-		<p class="tags  my-4 mx-auto">
-			<h6>Tags:</h6>
-			{% for tag in tags -%}
-			{% if tag !== 'post' %}
-			<a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
-			{% endif %}
-			{%- endfor %}
-			</p>
+		
 	</article>
-	
-	
+	<p class="seeMore">
+        <a href="/archive" class="">
+            &laquo Back to All Articles...
+        </a>
+    </p>
 
-
-</div>
+</main>

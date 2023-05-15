@@ -17,6 +17,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Watch for CSS Changes
+  module.exports = function(eleventyConfig) {
+    eleventyConfig.addWatchTarget("./src/static/css/");
+  };
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -28,8 +33,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
+    "./src/static/css/style.css":
+      "./static/css/style.css",
   });
 
   // Copy Image Folder to /_site
