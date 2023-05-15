@@ -6,13 +6,13 @@ tags:
   - tech
   - ui
   - dark themes
-thumbnail: https://cdn.dribbble.com/userupload/6809289/file/original-bdf0972f8219630c8e069282286f2faa.jpeg?compress=1&resize=752x651&vertical=center
+thumbnail: " "
 ---
 # Sandbox
 
 Inspired by Mac Terminal app
 
-![M](https://cdn.dribbble.com/userupload/6809289/file/original-bdf0972f8219630c8e069282286f2faa.jpeg?compress=1&resize=752x651&vertical=center)obile
+![M](https://cdn.dribbble.com/userupload/6809289/file/original-bdf0972f8219630c8e069282286f2faa.jpeg?compress=1&resize=752x651&vertical=center)
 
 ![Desktop](https://cdn.dribbble.com/userupload/6809290/file/original-e36248621f1b9d4eb061506fafcf6d71.jpeg?compress=1&resize=752x651&vertical=center "Desktop")
 
