@@ -6,7 +6,7 @@ date: 2016-02-26T14:05:43.698Z
 tags:
   - travel
   - Philippines
-  - ""
+thumbnail: https://scontent-bom1-1.xx.fbcdn.net/v/t1.18169-9/1517404_10153883743821768_7369208241603814435_n.jpg?stp=dst-jpg_p180x540&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=DzFDFS0QSxcAX9kN41c&_nc_ht=scontent-bom1-1.xx&oh=00_AfBCYJDQ5hw98OQZAFLHpci6axcZCMoRql3fowXjaMcnzw&oe=64708367
 ---
 Greetings from Bohol. We arrived here from Palawan after an epic 12+ hr journey that took us through road, air, ferry and Tricycle cab but it was well worth the effort. The water is crystal clear and the beaches are soft white sand that can only be described as baby powder.
 
@@ -36,6 +36,4 @@ He still wasn't their worst guest though. That distinction went to a Chinese gir
 
 I'm proud to say we've been good guests and very lucky to get great hosts and great transport everywhere and I'd like to give a big shout out to all the sweet taxi and tricycle drivers who've been our guides along this trip, providing great companionship and trying their best to communicate in whatever little English they speak.
 
-Our adventures over the next few days will take us to the island city of Cebu and onwards to the party island of Boracay. More updates to follow as we continue our exploration of paradise ![🙂](https://static.xx.fbcdn.net/images/emoji.php/v9/t4c/1/16/1f642.png)
-
-[![No photo description available.](https://scontent-bom1-1.xx.fbcdn.net/v/t1.18169-9/1517404_10153883743821768_7369208241603814435_n.jpg?stp=dst-jpg_p180x540&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=DzFDFS0QSxcAX9kN41c&_nc_ht=scontent-bom1-1.xx&oh=00_AfBCYJDQ5hw98OQZAFLHpci6axcZCMoRql3fowXjaMcnzw&oe=64708367)](https://www.facebook.com/photo/?fbid=10153883743821768&set=a.10150180419066768&__cft__[0]=AZUZhCDVz7QtRERNRow0WSFsQ7sLWc9KYtSLo3bbWZ9GOP0EhZFSQi0rq3Rybai3mEUCHHETGwGTXoZUP1I1cfSEkYlsVWwzd73zR2HMnBKSn2euHv3ACeNli3YaMBxOzZSj0CSuf79LWJ2iyM_1-FXAAL7SWI6SZmfvKDU2P40J_A&__tn__=EH-R)
+Our adventures over the next few days will take us to the island city of Cebu and onwards to the party island of Boracay. More updates to follow as we continue our exploration of paradise
