@@ -8,12 +8,6 @@
 
 
 
-	{% if post.data.thumbnail %}
-	<div class="postThumb">
-		<img src='{{ post.data.thumbnail }}' width="100" />
-	</div>
-	{% endif %}
-
 	<div class="postContent">
 		<h2 class="postTitle">
 			<a href="{{ post.url | url }}">
