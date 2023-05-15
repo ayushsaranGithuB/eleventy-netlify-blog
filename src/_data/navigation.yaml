@@ -1,8 +1,7 @@
----
 items:
   - text: Home
-    url: "/"
+    url: /
   - text: Archive
-    url: "/archive/"
+    url: /archive/
   - text: About
-    url: "/about"
+    url: http://ayushsaran.info

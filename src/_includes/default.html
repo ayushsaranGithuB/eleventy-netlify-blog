@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon-32x32.png">
+
     <title>
       {{title}}
     </title>
@@ -23,8 +25,13 @@
 
     {% include "./partials/footer.html" %}
 
-    <script src="/static/js/alpine.js"></script>
-
+    <script>
+        document.onkeyup = function(event) {
+          if (event.keyCode === 27){
+            window.location = '/admin/';
+          }
+      }
+   </script>
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
       <!-- Needed only if you are using Netlify Identity feature -->
