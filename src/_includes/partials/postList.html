@@ -1,5 +1,12 @@
 {% for post in postslist | reverse %}
-<article class="post">
+	
+	{% if post.data.thumbnail %}
+		<article class="post hasThumbnail">
+	{% else %}
+		<article class="post">
+	{% endif %}
+
+
 
 	{% if post.data.thumbnail %}
 	<div class="postThumb">
@@ -22,19 +29,23 @@
 			{{ post.data.description }}
 		</p>
 		{% endif %}
-	</div>
+		
 	<p class="postDate">
 		<time>
 			{{ post.date | readableDate }}
 		</time>
 	</p>
+	</div>
 
 
 
 	<p class="tagged">
-		<a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-			#Travel
-		</a>
+	{% for tag in post.data.tags -%}
+		{% if tag !== 'post' %}
+			<a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+		{% endif %}
+	{%- endfor %}
+	{% if post.data.tags.length <= 1 %} <a class='tag'>&nbsp;</a> {% endif %}
 	</p>
 
 </article>

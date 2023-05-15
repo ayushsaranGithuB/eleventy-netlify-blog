@@ -48,8 +48,8 @@ h4{
 
 /* Utitlity Clases */
 .limitedWidth{    
-    max-width: 800px;
-    padding:0 50px;
+    max-width: 840px;
+    padding:0 30px;
     margin: 0 auto;
 }
 
@@ -179,6 +179,7 @@ main header h1{
 main header p{
     max-width: 70ch;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 
@@ -187,6 +188,7 @@ main header p{
 .post{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .postWrapper{
@@ -196,6 +198,9 @@ main header p{
 
 .postContent{
     order: 3;
+    flex-basis: 100%;
+}
+.hasThumbnail .postContent{
     flex-basis: 70%;
 }
 
@@ -209,7 +214,7 @@ main header p{
 
 .postExcerpt{
     max-width: 82ch;
-    margin:0 0 40px;
+    margin:0;
     font-size: 14px;
     line-height: 22px;    
 }
@@ -238,34 +243,49 @@ main header p{
 }
 
 .tagged{
+    position: relative;
+    padding: 0;
+    order: 1;
+    margin: 5px 0 10px 0;
+    flex-basis: 100%;
+}
+
+.tagged a.tag{
+    color:var(--light);
+    font-size: 11px;
+}
+
+.tagged a.tag:first-of-type{
     font-size: 12px;
     background-color: var(--primary);
     display: inline-block;
     position: relative;
     height: 20px;
     line-height: 20px;
-    padding: 0 10px;
-    order: 1;
+    padding: 1px 6px;
+    color: var(--dark);
 }
 
-    .tagged:after{
+    .tagged a.tag:first-of-type:after{
         content: '';
         position: absolute;
-        right: -10px;
+        right: -9px;
         height: 0;
         width: 0;
-        border-top: 10px solid transparent;
+        border-top: 11px solid transparent;
         border-bottom: 10px solid transparent;
         border-left: 10px solid var(--primary);
     }
 
+    .tagged a.tag{
+        margin-right: 10px;
+    }
+
 .postDate{
-    font-size: 12px;
-    color: var(--light);
-    order: 2;
-    margin-left: 20px;
-    margin-right: auto; 
-    flex-basis: 80%;
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 40px 0;
+    line-height: 20px;
 }    
 
 p.seeMore{
@@ -292,13 +312,21 @@ p.seeMore{
     font-size: 32px;
 }
 
+
 .home .post:first-of-type .postExcerpt{
     font-size: 15px;
     line-height: 24px;
+}
+
+.home .post:first-of-type .postDate{
+    margin-bottom: 0;
+}
+.home .post:first-of-type{
     border-bottom: 1px solid var(--lighter);
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
+
 
 
 /* SINGLE POST */
