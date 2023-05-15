@@ -6,6 +6,7 @@ date: 2023-04-26T13:47:32.039Z
 tags:
   - travel
   - kashmir
+thumbnail: /static/img/17310097_10155041921456768_1754456213527370245_o.jpg
 ---
 To Gulmarg and Beyond.
 
