@@ -20,8 +20,9 @@ path: home
     <h4>Recently Added</h4>
 
     {% set postslist = collections.post %}
+    {% for post in postslist | reverse %}
     {% include "partials/postList.html" %}
-
+    {% endfor %}
     <p class="seeMore">
         <a href="/archive" class="">
             See All Articles...

@@ -5,6 +5,8 @@ layout: archive
 <main class="archive">
     {% set postslist = collections.post %}
 
+    {% for post in postslist | reverse %}
     {% include "partials/postList.html" %}
+    {% endfor %}
 
 </main>
