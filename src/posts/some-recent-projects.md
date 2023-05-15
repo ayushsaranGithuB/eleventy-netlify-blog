@@ -22,4 +22,4 @@ Fully responsive, mobile friendly, content saved in markdown,
 
 Built with 11ty and Next.js | Hosted on Vercel
 
-[\> Sandbox.Ayushsaran.Info](https://sandbox.ayushsaran.info/)
+**[\> Sandbox.Ayushsaran.Info](https://sandbox.ayushsaran.info/)**
