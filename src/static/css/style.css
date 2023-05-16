@@ -336,6 +336,10 @@ article.singlePost{
     line-height: 24px;
 }
 
+article.singlePost img{
+    max-width: 80vw;
+}
+
 section.allPosts{
     padding-top: 50px;
 }
